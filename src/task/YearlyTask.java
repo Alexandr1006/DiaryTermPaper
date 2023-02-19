@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 public class YearlyTask extends Task{
-    public boolean appearsIn(LocalDate inputData, LocalDate taskData) {
-        return inputData.getDayOfYear() == taskData.getDayOfYear();
+    public boolean appearsIn(LocalDate inputData) {
+        return inputData.getDayOfYear() == getDate().getDayOfYear();
     }
     public void nextTimeRunTask() {
         LocalDate localDate = getDate();

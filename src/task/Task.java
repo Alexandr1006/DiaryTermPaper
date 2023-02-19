@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import java.util.Date;
 import java.util.Objects;
 
-public abstract class Task {
+public abstract class Task{
     static int idGenerator = 0;
     private String title;
     private Type taskType;
@@ -105,7 +105,7 @@ public abstract class Task {
 
 
     }
-    public abstract boolean appearsIn(LocalDate inputDate, LocalDate taskDate);
+    public abstract boolean appearsIn(LocalDate inputDate);
     public abstract void nextTimeRunTask();
     @Override
     public boolean equals(Object o) {

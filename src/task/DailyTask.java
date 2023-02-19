@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class DailyTask extends Task{
-    public boolean appearsIn(LocalDate inputData, LocalDate taskData) {
+    public boolean appearsIn(LocalDate inputData) {
         return true;
     }
 

@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 public class MonthlyTask extends Task{
-    public boolean appearsIn(LocalDate inputData, LocalDate taskData) {
-        return inputData.getDayOfMonth() == taskData.getDayOfMonth();
+    public boolean appearsIn(LocalDate inputData) {
+        return inputData.getDayOfMonth() == getDate().getDayOfMonth();
     }
     public void nextTimeRunTask() {
         LocalDate localDate = getDate();

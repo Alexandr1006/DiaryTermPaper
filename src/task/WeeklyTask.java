@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 public class WeeklyTask extends Task {
-    public boolean appearsIn(LocalDate inputData, LocalDate taskData) {
-        return inputData.getDayOfWeek() == taskData.getDayOfWeek();
+    public boolean appearsIn(LocalDate inputData) {
+        return inputData.getDayOfWeek() == getDate().getDayOfWeek();
     }
     public void nextTimeRunTask() {
         LocalDate localDate = getDate();

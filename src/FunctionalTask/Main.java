@@ -13,9 +13,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in).useDelimiter("\\n");
         String text = scanner.next();
 
-        int wordsCount = Arrays.stream(text.replaceAll("\\p{Punct}", "").split(" "))
-                .collect(Collectors.toList())
-                .size();
+        long wordsCount = Arrays.stream(text.replaceAll("\\p{Punct}", "").split(" ")).count();
+
         System.out.println("Количество слов в тексте " + wordsCount);
 
         Arrays.stream(text.replaceAll("\\p{Punct}", "").split(" "))

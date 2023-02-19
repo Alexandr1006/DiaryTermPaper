@@ -87,8 +87,7 @@ public class TaskService {
             System.out.println("В списке ничего нет");
         }
         for (Map.Entry<Integer, Task> value : taskMap.entrySet()) {
-            LocalDate taskDate = value.getValue().getDate();
-            if (taskDate.equals(localDate) || value.getValue().appearsIn(localDate, taskDate)) {
+            if (value.getValue().appearsIn(localDate)) {
                 System.out.println(value);
             }
         }
